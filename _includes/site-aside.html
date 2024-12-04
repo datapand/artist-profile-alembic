@@ -1,0 +1,30 @@
+<aside class="aside  typeset  aside--{{ include.align | default: 'right' }}">
+
+  {% if page.layout == "post" %}
+    <section class="section  section--related-posts">
+      {% include post-related.html %}
+      <!-- <h6>Follow, Subscribe & Contact:</h6> -->
+      <!-- <p>{{ site.description }}</p> -->
+      <!-- {% include nav-social.html %} -->
+    </section>
+
+  {% elsif page.page_id == "contact" %}
+    <section class="section  section--category-index">
+      <h3>External sites:</h3>
+      {% include nav-social.html %}
+    </section>
+
+  {% elsif page.layout == "page" or page.layout == "home" or page.layout == "blog" %}
+    <section class="section  section--description">
+      {% include figure.html image=page.feature_image alt=page.feature_text width='100%' height='100%' %}
+    </section>
+
+  {% elsif page.layout == "categories" %}
+    <section class="section  section--category-index">
+      <h3>Index</h3>
+      {% include nav-categories.html %}
+    </section>
+
+  {% endif %}
+
+</aside>

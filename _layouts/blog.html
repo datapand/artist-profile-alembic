@@ -1,0 +1,30 @@
+---
+layout: default
+indexing: false
+sitemap: false
+---
+
+{% include site-header.html %}
+
+<main class="main  container">
+
+  <div class="content">
+    
+    <article class="article  article--page  typeset">
+      {% if paginator.posts %}
+        {% assign collectiondata = site.collections | where: "label", page.collectionpage | first %}
+        {{ collectiondata.description | markdownify }}
+      {% else %}
+        {{ content }}
+      {% endif %}
+    </article>
+
+    {% include post-list.html %}
+
+  </div>
+
+  {% if page.aside == true %}{% include site-aside.html %}{% endif %}
+
+</main>
+
+{% include site-footer.html %}

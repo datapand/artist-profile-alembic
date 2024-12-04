@@ -1,0 +1,169 @@
+# Site configuration
+# 1. Files excluded from Jekyll builds
+# 2. Installed Gems
+# 3. Gem settings
+# 4. Jekyll settings
+# 5. Collections
+# 6. Jekyll collections settings
+# 7. Site settings
+# 8. Site favicons & manifest icons
+# 9. Site navigation
+
+theme: alembic-jekyll-theme
+
+# 1. Files excluded from Jekyll builds
+exclude:
+- README.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- screenshot.png
+- LICENSE
+- CNAME
+- Gemfile
+- Gemfile.lock
+- alembic-jekyll-theme.gemspec
+- .jekyll-cache
+
+# 2. Installed Gems
+plugins:
+- jekyll-sitemap
+- jekyll-mentions
+- jekyll-paginate
+- jekyll-seo-tag
+- jekyll-redirect-from
+- jekyll-feed
+- jekyll-commonmark
+- jekyll-include-cache
+- jemoji
+- jekyll-polyglot
+- jekyll-google-tag-manager
+- jekyll-minifier
+
+# 3. Gem settings
+paginate: 5 # jekyll-paginate > items per page
+paginate_path: blog/page:num # jekyll-paginate > blog page
+jekyll-mentions: https://twitter.com # jekyll-mentions > service used when @replying
+twitter:
+  username:  # jekyll-seo-tag > Owners twitter username
+author: Selen Apaydın # jekyll-seo-tag > default author
+social: # jekyll-seo-tag > social overrides
+  name: Selen Apaydın # jekyll-seo-tag > real name
+  links:  # jekyll-seo-tag > social aliases (sameAs)
+    - https://twitter.com/
+    - https://www.facebook.com/pianistandpianotutor
+    - https://www.linkedin.com/in/selen-apaydin-b920a63/
+    - https://www.instagram.com/apaydin.selen/
+# markdown: CommonMark # Markdown parse settings, CommonMark performs slightly better an others in build time
+# commonmark:
+  # options: ["SMART", "FOOTNOTES"]
+  # extensions: ["strikethrough", "autolink", "table"]
+
+# 4. Jekyll settings
+sass:
+  style: compressed # Style compression
+permalink: /:slugified_categories/:title # Permalink style (/category1/category2/page-name/)
+excerpt_separator: <!-- more --> # Marks end of excerpt in posts
+timezone: Europe/London # Timezone for blog posts and alike
+
+# 5. Collections
+collections:
+  pages:
+    title: Pages
+    output: true
+
+# 6. Jekyll collections settings
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "/assets/default-social-image.png" # Default image for sharing
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post # Set the default layout for posts
+  - scope:
+      path: "pages"
+      type: "pages"
+    values:
+      layout: page
+
+# 7. Site settings
+encoding: utf-8 # Make sure the encoding is right
+lang: en # Set the site language
+title: "Selen Apaydın" # Site name or title, also used in jekyll-seo-tag
+logo: "/assets/favicon/favicon.svg" # Site logo, also used in jekyll-seo-tag
+description: "" # Site description and default description, also used in jekyll-seo-tag
+url: "https://selenapaydin.netlify.app" # Site url, also used in jekyll-seo-tag
+baseurl: ""
+repo: "https://github.com/datapand/selenapaydin-alembic"
+email: "selenapaydin@gmail.com"
+# disqus: "" # Blog post comments, uncomment the option and set the site ID from your Disqus account
+# date_format: "%-d %B %Y" # Blog post date formatting using placeholder formatting
+google_analytics: "G-616W6GKESV"
+# google_analytics_anonymize_ip: ""
+# google:
+#   tag_manager:
+#     container_id: GTM-XXXXXXXX
+# service_worker: false # Will turn off the service worker if set to false
+# short_name: "" # The web application short name, defaults to the site title
+css_inline: true # Will insert all styles into a single <style> block in the <head> element and remove the style <link> reference
+
+# 8. Site favicons & manifest icons
+favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
+  192: '/assets/favicon/web-app-manifest-192x192.png'
+  512: '/assets/favicon/web-app-manifest-512x512.png'
+
+# 9. Site navigation
+navigation_header:
+- page_id: home
+- page_id: biography
+- page_id: tutoring
+- page_id: recordings
+- page_id: premieres
+- page_id: contact
+
+social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
+  youtube: https://www.youtube.com/@selenapaydin
+  instagram: https://www.instagram.com/apaydin.selen/
+  facebook: https://www.facebook.com/pianistandpianotutor
+  quora: https://www.quora.com/profile/Selen-Apaydin
+  twitter:  https://www.x.com/
+  RSS: /feed.xml
+
+sharing_links: # Appear at the bottom of single blog posts, add as desired. The value can be 'true' or the desired button colour
+  Twitter: "#0d94e7"
+  facebook: "#3B5998"
+  Email: true
+
+# Load custom fonts from fonts.google.com etc
+#
+# TIP: Try to keep the number of urls as low to reduce the performance cost
+#      If multiple fonts can be requested in a single url opt for this
+fonts:
+  preconnect_urls:
+    - https://fonts.gstatic.com
+  font_urls:
+    - https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap
+    - https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap
+    - https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap
+    - https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap
+    - https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap
+    - https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap
+
+languages: ["en"]
+default_lang: "en"
+exclude_from_localization: ["assets/*"]
+parallel_localization: true
+
+sass:
+  sourcemap: never
+
+# Compress
+compress_html:
+  clippings: all
+
+jekyll-minifier:
+  exclude: 'sitemap.xml'
+
+heroimage: /assets/img/selen-cover.jpg
