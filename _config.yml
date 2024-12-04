@@ -101,6 +101,7 @@ email: "selenapaydin@gmail.com"
 # disqus: "" # Blog post comments, uncomment the option and set the site ID from your Disqus account
 # date_format: "%-d %B %Y" # Blog post date formatting using placeholder formatting
 google_analytics: "G-616W6GKESV"
+cookie_consent: false
 # google_analytics_anonymize_ip: ""
 # google:
 #   tag_manager:

@@ -46,12 +46,12 @@ layout: compress
     {% include site-favicons.html %}
 
     {% if site.google_analytics %}{% include site-analytics.html %}{% endif %}
-    {% gtm head %}
+    {% if site.google.tag_manager %}{% gtm head %}{% endif %}
 
     {% include site-fonts.html %}
 
     {% include site-before-start.html %}
-    {% include cookie-consent-head.html %}
+    {% if site.cookie_consent %}{% include cookie-consent-head.html %}{% endif %}
     <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
   </head>
 
@@ -67,8 +67,8 @@ layout: compress
 
     {% include site-before-end.html %}
 
-    {% gtm body %}
-    {% include cookie-consent-body.html %}
+    {% if site.google.tag_manager %}{% gtm body %}{% endif %}
+    {% if site.cookie_consent %}{% include cookie-consent-body.html %}{% endif %}
   </body>
 
 </html>
