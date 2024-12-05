@@ -8,7 +8,7 @@ feature_subtext: |
   Biography
 feature_image: assets/img/piano-playing.jpg
 excerpt: |
-  Selen Apaydin is a concert pianist whose stage presence in combination with her mastery of the keyboard and sensitivity expressed through the manipulation of sound made her name recognized. Having pursued a professional soloist training/carrier for a decade under the guidance of world known soloist, mentor, educator Maestro Aquilles Delle Vigne.
+  Having pursued a professional soloist training/carrier for a decade under the guidance of world known soloist, mentor, educator Maestro Aquilles Delle Vigne.
 lang: en
 page_id: biography
 permalink: /biography
