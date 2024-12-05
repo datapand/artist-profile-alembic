@@ -14,23 +14,16 @@ page_id: recordings
 permalink: /recordings
 carousels:
   - videos: 
-    - id: mv1asI5RHVI
-    - id: -2bCphYIE-A
-    - id: KhYqdfXLuog
-    - id: IyAyr91JiV0
-    - id: z6OgpYP3pjM
-    - id: XvtvJiXdI0w
+    - id: 'mv1asI5RHVI'
+    - id: '-2bCphYIE-A'
+    - id: 'KhYqdfXLuog'
+    - id: 'IyAyr91JiV0'
+    - id: 'z6OgpYP3pjM'
+    - id: 'XvtvJiXdI0w'
 ---
 
-<section id="wide-div">
-  <div id="carousel">
-    {% for item in page.carousels[0].videos %}
-      <div>
-        {% include video.html id=item.id %}
-      </div>
-    {% endfor %}
-  </div>
-</section>
+{% assign videos = page.carousels[0].videos %}
+{% include carousel.html playlist=videos %}
 
 ## Other performance recordings
 <br>
