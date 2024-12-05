@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://selenapaydin.com/sitemap.xml
+Sitemap: https://selenapaydin.com/sitemap.xml
